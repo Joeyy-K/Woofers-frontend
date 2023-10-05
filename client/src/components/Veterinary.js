@@ -14,7 +14,7 @@ const veterinariansData = [
       name: 'Petville Veterinary Clinic',
       address: 'Mbaruk road, Nairobi, Kenya',
       coordinates: [-1.30312, 36.80127],
-      phone: '+254724950976',
+      phone: ['+254724950976'],
     },
     {
       name: 'Mobivet Veterinary Clinic',
@@ -26,7 +26,7 @@ const veterinariansData = [
       name: 'Secombe Veterinary Surgeons',
       address: 'Langata Road 469, Nairobi, Kenya, 00502',
       coordinates: [-1.34255, 36.7650986],
-      phone: '0722 720 759',
+      phone: ['0722 720 759'],
     },
     {
       name: 'Hardy Veterinary Clinic',
@@ -50,13 +50,13 @@ const veterinariansData = [
       name: 'St Austins Rd Veterinary Clinic',
       address: 'Along James Gichuru Road',
       coordinates: [-1.270801, 36.772543],
-      phone: '0722 646 191',
+      phone: ['0722 646 191'],
     },
     {
       name: 'Noble Veterinary Surgeons',
       address: 'Five Star Road, South C',
       coordinates: [-1.324393, 36.811168],
-      phone: '0722 657 719',
+      phone: ['0722 657 719'],
     },
     {
       name: 'Garden Veterinary Services',
