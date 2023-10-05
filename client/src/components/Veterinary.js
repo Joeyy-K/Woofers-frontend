@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Veterinary.css"
 
 const veterinariansData = [
     {
@@ -65,28 +66,29 @@ const veterinariansData = [
 
 function Veterinarians() {
   return (
-    <div className="flex bg-white">
-      {/* Left Side - Veterinary Locations */}
-      <div className="w-1/3 p-4">
-        <h1 className="text-2xl font-semibold mb-4">Veterinary Locations</h1>
-        <ul>
+    <div className="flex-container">
+      {/* Left Side - Map */}
+      <div className="map-container">
+        <img
+          src="./nairobi.jpg"
+          alt="Nairobi Map"
+          style={{ height: '100%', width: '100%', objectFit: 'cover' }}
+        />
+      </div>
+
+      {/* Right Side - Veterinary Locations */}
+      <div className="locations-container">
+      <h1 className="text-2xl font-semibold mb-4 mx-auto text-center">Veterinary Locations</h1>
+      <hr/>
+        <ul className="list-none">
           {veterinariansData.map((vet, index) => (
-            <li key={index} className="mb-4">
+            <li key={index} className="mb-2">
               <h2 className="text-lg font-medium">{vet.name}</h2>
               <p className="text-gray-600">{vet.address}</p>
               <p className="text-gray-600">Contacts: {vet.phone.join(', ')}</p>
             </li>
           ))}
         </ul>
-      </div>
-
-      {/* Right Side - Map */}
-      <div className="w-2/3 h-screen">
-        <img
-          src="/nairobi.jpg"
-          alt="Nairobi Map"
-          style={{ height: '100%', width: '100%', objectFit: 'cover' }}
-        />
       </div>
     </div>
   );

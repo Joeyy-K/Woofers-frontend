@@ -1,0 +1,57 @@
+/* Style for the entire container */
+.flex-container {
+    display: flex;
+    margin-top: 40px;
+    height: 100vh; /* Make the container full height of the viewport */
+    overflow: hidden; /* Hide overflow to prevent double scrollbars */
+  }
+  
+  /* Style for the left side (veterinary hospitals) */
+  .locations-container {
+    flex: 1; /* Take up 80% of the available space */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px; /* Add padding for better readability */
+    margin-top: -2%;
+  }
+  
+  /* Style for the right side (fixed image) */
+  .map-container {
+    flex: 2; /* Take up 20% of the available space */
+    background-size: cover; /* Cover the container with the image */
+    background-position: center; /* Center the background image */
+    color: white; /* Text color for content on the right side */
+    padding: 10px; /* Add padding for better readability */
+    position: relative; /* Make sure the content is relative to this container */
+    overflow: hidden; /* Hide overflow to prevent double scrollbars */
+  }
+  
+  /* Style for the list of veterinary locations */
+  .locations-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Style for each individual location item */
+  .locations-container li {
+    margin-bottom: 10px;
+  }
+  
+  /* Style for location name */
+  .locations-container h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Style for location address and phone */
+  .locations-container p {
+    margin: 0;
+  }
+  
+  /* Style for the page title */
+  .locations-container h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
