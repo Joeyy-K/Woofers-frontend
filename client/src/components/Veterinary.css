@@ -12,11 +12,12 @@
     overflow-y: auto; /* Enable vertical scrolling */
     padding: 10px; /* Add padding for better readability */
     margin-top: -2%;
+    margin-left: 2px;
   }
   
   /* Style for the right side (fixed image) */
   .map-container {
-    flex: 2; /* Take up 20% of the available space */
+    flex: 1.9; /* Take up 20% of the available space */
     background-size: cover; /* Cover the container with the image */
     background-position: center; /* Center the background image */
     color: white; /* Text color for content on the right side */
