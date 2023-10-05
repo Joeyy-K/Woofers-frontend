@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 function Shop() {
   const [products, setProducts] = useState([]);
+  const [activeCategory, setActiveCategory] = useState('dogs'); // Initial category
 
   // Function to display products based on the category
   function displayProducts(category) {
@@ -46,6 +47,24 @@ function Shop() {
         name: "Cat Food",
         price: 15.99,
       },
+      {
+        id: 5,
+        category: "dogs",
+        name: "shirts",
+        price: 10.55,
+      },
+      // { 
+      //   id: 6,
+      //   category: "cats",
+      //   name: "sweaters",
+      //   price: "9.45",
+      // },
+      // {
+      //   id: 7,
+      //   category: "dogs",
+      //   name: "Bioline Flea Spray",
+      //   price: "8.59",
+      //  },
     ];
 
     setProducts(fetchedProducts);
@@ -55,10 +74,10 @@ function Shop() {
     <div>
       <h2>Shop here</h2>
       <nav>
-        <a href="#dogs">Dogs</a>
-        <a href="#cats">Cats</a>
+        <button onClick={() => setActiveCategory('dogs')}>Dogs</button>
+        <button onClick={() => setActiveCategory('cats')}>Cats</button>
       </nav>
-      {displayProducts('dogs')} {/* Initial display of dog products */}
+      {displayProducts(activeCategory)}
     </div>
   );
 }
