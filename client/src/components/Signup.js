@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
+import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
 export const SignupForm = () => {
   const [refreshPage, setRefreshPage] = useState(false);
+  const navigate = useNavigate()
 
   useEffect(() => {
     console.log("FETCH! ");
@@ -12,6 +14,7 @@ export const SignupForm = () => {
         console.log(data);
       });
   }, [refreshPage]);
+
 
   const formSchema = yup.object().shape({
     username: yup.string().required("Must enter a name").max(15),
@@ -25,7 +28,7 @@ export const SignupForm = () => {
     },
     validationSchema: formSchema,
     onSubmit: (values) => {
-      fetch("users", {
+      fetch("https://pets-backend-nlog.onrender.com/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -34,6 +37,7 @@ export const SignupForm = () => {
       }).then((res) => {
         if (res.status === 200) {
           setRefreshPage(!refreshPage);
+          navigate("/home")
         }
       });
     },

@@ -1,0 +1,48 @@
+.title {
+    font-weight: bolder;
+    font-size: 30px;
+    color: #6038d2;
+    font-family: inter;
+    margin: 50px;
+    margin-bottom: 9%;
+}
+
+.sentence {
+    font-weight: bold;
+    font-size: 50px;
+    font-family: inika;
+    margin: 50px;
+    margin-bottom: -2%;
+}
+
+.sentence1 {
+    font-weight: bold;
+    font-size: 50px;
+    font-family: inika;
+    margin: 50px;
+    margin-bottom: 9%;
+}
+
+.sentence2 {
+    font-weight: normal;
+    font-size: 26px;
+    align-items: stretch;
+    margin: 50px;
+    margin-bottom: -2%;
+}
+
+.sentence3 {
+    font-weight: normal;
+    font-size: 26px;
+    align-items: stretch;
+    margin: 50px;
+    margin-bottom: 8%;
+}
+
+.sentence4 {
+    align-items: center;
+    text-decoration: none;
+    margin: 40%;
+    font-size: 30px;
+    margin-bottom: 8%;
+}
