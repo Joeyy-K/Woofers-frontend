@@ -73,7 +73,6 @@ function Shop() {
 
   return (
     <div>
-        <Navbar />
       <h2>Shop here</h2>
       <nav>
         <button onClick={() => setActiveCategory('dogs')}>Dogs</button>

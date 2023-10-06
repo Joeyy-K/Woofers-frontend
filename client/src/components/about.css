@@ -1,32 +1,13 @@
-/* About.css */
+.About {
+    font-weight: bold;
+    font-family: inika;
+    font-size: 25px;
+    margin: 2%;
+    color: #6038d2;
+}
 
-/* Style the overall container */
-.about-container {
-    background-color: #8cb52e;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  /* Style the heading */
-  .about-heading {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  /* Style the paragraph text */
-  .about-paragraph {
-    font-size: 20px;
-    line-height: 1.5;
-    color: #a92b2b;
-  }
-  
-  /* Style the image */
-  .about-image {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
+.p {
+    margin: 3%;
+    font-size: 19px;
+}
+
