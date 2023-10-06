@@ -92,7 +92,7 @@ export const SignupForm = () => {
         />
         <p style={{ color: "red" }}> {formik.errors.phonenumber}</p>
       
-        <button type="submit" className="signupb">Sign Up</button>
+        <button type="submit" className="signupb"><Link to="/home">Sign Up</Link></button>
       </form>
       <p>Already have an account? <Link to="/signin">Sign in here</Link></p>
     </div>
