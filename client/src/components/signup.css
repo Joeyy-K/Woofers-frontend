@@ -1,0 +1,15 @@
+.signup {
+    padding: 7px;
+    margin-top: 3px;
+    border: 2px solid;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgb(0,0,0,0.06);
+    width: 19%;
+}
+
+.signupb {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 7px;
+    text-decoration: none;
+}
