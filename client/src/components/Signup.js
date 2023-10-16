@@ -1,17 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom"
 import * as yup from "yup";
-import { Link } from "react-router-dom";
 export const SignupForm = () => {
+  const [users, setUsers] = useState([{}]);
   const [refreshPage, setRefreshPage] = useState(false);
   const navigate = useNavigate()
 
+  useEffect(() => {
+    console.log("FETCH! ");
+    fetch("/users")
+      .then((res) => res.json())
+      .then((data) => {
+        setUsers(data);
+        console.log(data);
+      });
+  }, [refreshPage]);
+
   const formSchema = yup.object().shape({
-    username: yup.string().required("Must enter a name").max(15),
     email: yup.string().email("Invalid email").required("Must enter email"),
-    password: yup.string().required("Must enter a passwword"),
-    phonenumber: yup.string().required("Must enter phonenumber")
+    username: yup.string().required("Must enter a username").max(15),
+    password: yup.string().required("Must enter password"),
   });
 
   const formik = useFormik({
@@ -19,22 +28,28 @@ export const SignupForm = () => {
       username: "",
       email: "",
       password: "",
-      phonenumber: "",
     },
     validationSchema: formSchema,
-    onSubmit: (values) => {
-      fetch("https://pets-backend-nlog.onrender.com/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values, null, 2),
-      }).then((res) => {
-        if (res.status === 200) {
+    onSubmit: async (values) => {
+      if (values.profile_pic === '') {
+        values.profile_pic = null;
+      }
+
+      try {
+        let resp = await fetch("/user_posts", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values, null , 2),
+        });
+        if (resp.ok) {
           navigate("/home")
           setRefreshPage(!refreshPage);
         }
-      });
+      } catch (error) {
+        console.error("Network error:", error);
+      }
     },
   });
  

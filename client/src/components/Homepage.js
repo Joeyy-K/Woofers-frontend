@@ -9,6 +9,9 @@ export default function Homepage() {
         <p className="sentence1">Pet Care Services</p>
         <p className="sentence2">Grooming and supply provides grooming services for all dogs </p>
         <p className="sentence3">and cats breeds.We are fully committed to the Health</p>
-        <p><Link to="/shop" className="sentence4">Shop Now</Link></p>
+        <div className="flexbox">
+            <p><Link to="/shop" className="sentence4">Shop Now </Link></p>
+            <p><Link to="/Veterinarians" className="sentence4">Vets</Link></p>
+        </div>  
     </div>
 }
