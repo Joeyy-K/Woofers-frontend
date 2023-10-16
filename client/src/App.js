@@ -11,10 +11,8 @@ import Homepage from './components/Homepage';
 import { SignupForm } from './components/Signup';
 
 import Veterinarians from './components/Veterinary';
-=======
 import Shop from './components/shop';
 import About from './components/about';
-import Veterinarians from './components/Veterinary';
 import SignIn from './components/Signin';
 
 
@@ -22,10 +20,6 @@ function App() {
   console.log(window.location)
   return (
     <div className="App">
-
-        <SignupForm/>
-        <Veterinarians/>
-
         <Routes>
           <Route exact="true" path= "/" element={<SignupForm />}/>
           <Route exact="true" path= "/signin" element={<SignIn />}/>
