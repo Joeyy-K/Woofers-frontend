@@ -70,7 +70,7 @@ function Veterinarians() {
       {/* Left Side - Map */}
       <div className="map-container">
         <img
-          src="./nairobi.jpg"
+          src="./nairobi.png"
           alt="Nairobi Map"
           style={{ height: '100%', width: '100%', objectFit: 'cover' }}
         />
