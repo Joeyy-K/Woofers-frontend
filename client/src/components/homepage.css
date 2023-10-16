@@ -40,9 +40,9 @@
 }
 
 .sentence4 {
+    display: flexbox;
     align-items: center;
-    text-decoration: none;
     margin: 40%;
     font-size: 30px;
-    margin-bottom: 8%;
+    margin-bottom: 10%;
 }

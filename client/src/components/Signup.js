@@ -9,7 +9,7 @@ export const SignupForm = () => {
 
   useEffect(() => {
     console.log("FETCH! ");
-    fetch("/users")
+    fetch("https://pets-backend-nlog.onrender.com/users")
       .then((res) => res.json())
       .then((data) => {
         setUsers(data);
@@ -21,6 +21,7 @@ export const SignupForm = () => {
     email: yup.string().email("Invalid email").required("Must enter email"),
     username: yup.string().required("Must enter a username").max(15),
     password: yup.string().required("Must enter password"),
+    phonenumber: yup.string().required("Must register with  number"),
   });
 
   const formik = useFormik({
@@ -28,6 +29,7 @@ export const SignupForm = () => {
       username: "",
       email: "",
       password: "",
+      phonenumber: "",
     },
     validationSchema: formSchema,
     onSubmit: async (values) => {
@@ -36,7 +38,7 @@ export const SignupForm = () => {
       }
 
       try {
-        let resp = await fetch("/user_posts", {
+        let resp = await fetch("https://pets-backend-nlog.onrender.com/users", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -107,7 +109,7 @@ export const SignupForm = () => {
         />
         <p style={{ color: "red" }}> {formik.errors.phonenumber}</p>
       
-        <button type="submit" className="signupb"><Link to="/home">Sign Up</Link></button>
+        <button type="submit" className="signupb">Sign Up</button>
       </form>
       <p>Already have an account? <Link to="/signin">Sign in here</Link></p>
     </div>
