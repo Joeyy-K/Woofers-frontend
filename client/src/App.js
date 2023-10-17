@@ -14,6 +14,7 @@ import Veterinarians from './components/Veterinary';
 import Shop from './components/shop';
 import About from './components/about';
 import SignIn from './components/Signin';
+import Services from './components/services';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route exact="true" path='/veterinary' element={<Veterinarians />}/>
           <Route exact="true" path= "/shop" element={<Shop />}/>
           <Route exact="true" path= "/about" element={<About />}/>
+          <Route exact="true" path= "/services" element={<Services />}/>
         </Routes>
 
     </div>
