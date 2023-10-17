@@ -7,7 +7,7 @@ export default function Navbar() {
             <li className="active"><NavLink exact="true" to="/home">Home</NavLink></li>
             <li className="active"><NavLink exact="true" to="/shop">Shop</NavLink></li>
             <li className="active"><NavLink exact="true" to="/veterinary">Veterinary</NavLink></li>
-            <li className="active"><NavLink exact="true" to="/about">About</NavLink></li>
+            <li className="active"><NavLink exact="true" to="/about">Contact Us</NavLink></li>
         </ul>
     </nav>
 }

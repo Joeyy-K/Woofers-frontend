@@ -1,14 +1,46 @@
-import React from "react";
+import React from 'react';
+import './contact.css';
 
-export default function Contact() {
-    return (
-        <div id="contact">
-            <h3 className="h">Contact Us:</h3>
-            <p className="s">JoeyBoy : joeboy@gmail.com</p>
-            <p className="s">Alex : alex@gmail.com</p>
-            <p className="s">Rotich : +254 712345678</p>
-            <p className="s">Cheryl : Cheryl@gmail.com</p>
-            <p className="s">Anita : anita@gmail.com</p>
-        </div>
-    )
+
+function ContactUs() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert('Form submitted!'); // alert
+  };
+
+  return (
+    <div>
+    <div>
+      <h2 style={{textAlign: "center"}}>Contact Us:</h2>
+      <div className="form-container">
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label htmlFor="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label htmlFor="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div className="social-links">
+        <h3>Follow Us on Social Media:</h3>
+        <ul>
+          <li>
+            <a href="https://www.facebook.com">Facebook</a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com">Twitter</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com">Instagram</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  );
 }
+
+export default ContactUs;

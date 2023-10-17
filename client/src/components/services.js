@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './services.css'; 
-import NavBar from '../components/NavBar';
+import Navbar from '../components/Navbar';
 
 function Services() {
   const [selectedService, setSelectedService] = useState('');
@@ -30,7 +30,7 @@ function Services() {
 
   return (
     <div>
-            <NavBar />
+            <Navbar />
 
     <div className="container">
       <h2 className="heading">Services Page</h2>
